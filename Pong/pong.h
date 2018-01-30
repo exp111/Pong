@@ -5,6 +5,7 @@
 #include <iostream>
 
 #include "main.h"
+#include "imgui/imgui.h"
 
 class Vector
 {
@@ -63,6 +64,7 @@ public:
 	//Draw and stuff
 	void init();
 	void run();
+	void drawFilledRect(ImDrawList* drawlist, unsigned x, unsigned y, ImVec4 color);
 	void draw();
 
 private:
