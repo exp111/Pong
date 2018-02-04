@@ -16,9 +16,9 @@ void Pong::updatePositions()
 		ball->velocity.y = -ball->velocity.y;
 
 	//Player
-	if (ball->position.y == playerLine - 1) //so we bounce of before the player not in him
+	if (ball->position.y - ball->velocity.y == playerLine) //so we bounce of before the player not in him
 	{
-		if (ball->position.x >= playerPosition - 1 && ball->position.x <= playerPosition + playerWidth)
+		if (ball->position.x + ball->velocity.x >= playerPosition && ball->position.x + ball->velocity.x < playerPosition + playerWidth)
 			ball->velocity.y = -ball->velocity.y;
 	}
 
